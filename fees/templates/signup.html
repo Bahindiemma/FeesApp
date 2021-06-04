@@ -1,0 +1,36 @@
+<html lang="en-us">
+
+    {% load static %}
+<head>    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap.js' %}"></script>
+</head>
+
+<body>
+    {% csrf_token %}
+<div class="container bg-red">
+    <form method="POST" action="" class="row" id="login-row">
+        <div class="col-lg-12">
+            <h2 class="display-5 text-center text-light">Create Account</h2>
+            {{form.username.label}} 
+            {{form.username}} 
+            {{form.email.label}}
+            {{form.email}}
+            {{form.password1.label}}
+            {{form.password1}}
+            {{form.password2.label}}
+            {{form.password2}}
+            <h2 class="text-center ml-auto" id="link"><a href="#" class="text-light text-center text-primary">Forgot Password?</a></h2>
+        </div>
+
+        <input type="submit" name="Create User" value="submit">
+    </form>
+</div>
+</body>
+</html>
+
+    

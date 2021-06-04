@@ -1,0 +1,32 @@
+<html lang="en-us">
+
+    {% load static %}
+<head>    
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap.js' %}"></script>
+</head>
+
+<body>
+
+<div class="container bg-red">
+    <div class="row " id="login-row">
+        <div class="col-lg-6">
+            <h2 class="display-5 text-center text-light">Welcome back</h2>
+            <input type="text" placeholder="Your User Name" class="form-control m-3" name="username">
+            <input type="password" placeholder="Your Password" class="form-control m-3" name="Password">
+            <a href="{% url 'students' %}"><button id="login-btn" type="submit" class="form-control btn btn-outline-primary bg-primary text-center text-white m-3">Login</button></a>
+            <h2 class="text-center ml-auto" id="link"><a href="#" class="text-light text-center text-primary">Forgot Password?</a></h2>
+        </div>
+        <div class="col-lg-6 " id="signup-section">
+            <h2 class="display-5 py-4 text-center text-light"><i>New here?</i></h2>
+           <p class="text-center text-light">Sign Up to create an account</p>
+           <a href="{% url 'signup' %}"><button type="submit" class="btn btn-outline-light text-center form-control" id="sign-btn">Sign Up</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
