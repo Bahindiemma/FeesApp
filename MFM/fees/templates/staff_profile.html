@@ -1,0 +1,68 @@
+{% extends 'base.html'%}
+
+{% load static %}
+
+{% block content %}
+
+<div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Example label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Another label</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">{{form.name.label}}</th>
+        <th scope="col">{{form.email.label}}</th>
+        <th scope="col">{{form.password.label}}</th>
+        <th scope="col">{{form.address.label}}</th>
+        <th scope="col">{{form.created_at.label}}</th>
+        <th scope="col">{{form.password.label}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+<table border="1">
+    <tr>
+        <td>{{form.name.label}} {{form.name}}</td>
+        <td>{{form.email.label}}{{form.email}}</td>
+        <td>{{form.password.label}}{{form.password}}</td>        
+    </tr>
+    <tr>
+        <td>{{form.address.label}} {{form.address}}</td>
+        <td>{{form.created_at.label}} {{form.created_at}}</td>
+        <td>{{form.updated_at.label}} {{form.updated_at}}</td>
+    </tr>
+</table>
+    <input type="submit" name="submit" value="SUBMIT">
+</form>
+
+
+{% endblock %}
