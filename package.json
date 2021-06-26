@@ -7,10 +7,7 @@
     "example": "root"
   },
   "scripts": {
-    "open-app": "gulp open-app",
-    "start": "npm run open-app",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "gulp watch",
+   
     "app":"nodemon server.js"
   },
   "repository": {
