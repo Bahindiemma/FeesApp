@@ -59,3 +59,7 @@
   height: calc(100vh - 70px);
   margin-top: 70px;
 }
+.text-shadow{
+  color: #15c015;
+  text-shadow: 1px 1px rgb(134, 18, 18);
+}
