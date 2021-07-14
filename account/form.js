@@ -24,19 +24,30 @@ var toggleForm = ()=>{
 }
 /* Login validation */
 jQuery(document).ready(function($){
-    var input = $('input').val();
+    var regx = /[a-z]/g;
     // email validation
-    $('.signin-email').on('focus',function(){
-        let atposition = $(this).val().indexOf('@');
-        let dotposition = $(this).val().lastIndxexOf('.');
-         $('.error-email').text('dotposition').addClass('fa fa-times w3-text-red');
+    $('.signin-email').on('input',function(){
+           var input = $(this).val();
+        let atposition = input.indexOf("@");
+        let dotposition = input.lastIndexOf(".");
+        if (regx.test(input) == false) {
+            $(this).addClass('input-error');
+            $('.error-email').text('Email must be lowercase').addClass('fa fa-times w3-text-red');
+        } else if (atposition < 1 || (dotposition - atposition < 2)) {
+            $(this).addClass('input-error');
+            $('.error-email').text('Email must contain `@` and `.`').addClass('fa fa-times w3-text-red');
+        }else{
+            $(this).removeClass('input-error').addClass('input-sucess')
+            $('.error-email').text('').removeClass('fa fa-times w3-text-red');
+        }
+        //  $('.error-email').text('dotposition').addClass('fa fa-times w3-text-red');
     }).on('blur',function(){
         if($(this).val() == ''){
             $(this).addClass('input-error')
             $('.error-email').text('required').addClass('fa fa-times w3-text-red');
         } else{
-            $('.error-email').text('').removeClass('fa fa-times').addClass('fa fa-check w3-text-green');
-            $(this).removeClass('input-error').addClass('input-sucess');
+            $('.error-email').text('').removeClass('fa fa-times');
+            $(this).removeClass('input-error input-sucess');
         }
     });
 
@@ -67,6 +78,9 @@ jQuery(document).ready(function($){
     });
 
 });
+
+
+
 
 // Create account validation
 jQuery(document).ready(function($){
