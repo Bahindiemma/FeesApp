@@ -2,7 +2,7 @@
   "name": "fess-app",
   "version": "1.0.0",
   "description": "Amon Mukalazi P/S",
-  "main": "dashboard.html",
+  "main": "./account/login.html",
   "directories": {
     "example": "root"
   },
