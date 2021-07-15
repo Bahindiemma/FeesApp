@@ -2,7 +2,7 @@
   "name": "feesapp",
   "version": "1.2.0",
   "description": "Amon Mukalazi P/S",
-  "main": "login.html",
+  "main": "server.js",
   "scripts": {
     "app": "nodemon server.js",
     "start": "node server.js"

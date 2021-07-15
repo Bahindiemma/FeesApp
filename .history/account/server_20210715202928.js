@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 var server = http.createServer((request, response) => {
-    var url = path.join(__dirname, request.url == "/" ? "login.html" : request.url);
+    var url = path.join(__dirname, request.url == "/" ? "./account/login.html" : request.url);
 
     var extension = path.extname(url);
     var type;

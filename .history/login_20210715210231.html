@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css"/>
+</head>
+<body>
+    <section>
+        <!-- Login section -->
+        <div class="container-form sign-in">
+            <div class="signin-cover">
+                <img src="">
+            </div>
+            <div class="user-signin">
+                <h4>Sign In</h4>
+                <i class="error-email"></i>
+                <input type="email" class="signin-email" placeholder="Email">
+                <i class="error-password"></i>
+               <input type="password" class="signin-password" placeholder="Password"> 
+               <span>
+                   <b class="fa fa-eye pass-signin-show"></b> 
+                   <b class="fa fa-eye-slash pass-signin-hide"></b>
+                </span>
+                <button class="signin" type="submit">Login</button>
+                <p>Don't have account - <a href="#" onclick="toggleForm()">Create</a></p>
+            </div>
+        </div>
+
+<!-- create account -->
+        <div class="container-form sign-up">
+            <form name="signup_form" class="user-signup">
+                <h4>Create Account</h4>
+
+                <!-- username -->
+                <i class="msg-user"></i>
+                <input type="text" class="signup-username" placeholder="Username">
+                <!-- email -->
+                <i class="msg-email"></i>
+                <input type="email" name="email" class="signup-email" placeholder="Email">
+                <!-- address -->
+                <i class="msg-address"></i>
+                <input type="text" class="signup-address" placeholder="Home Address">
+                <!-- new password -->
+                <i class="msg-new-password"></i>
+                <input type="password" class="signup-npass" placeholder="New Password">
+                <span class="npass-view">
+                    <b class="fa fa-eye npass-signup-show"></b> 
+                    <b class="fa fa-eye-slash npass-signup-hide"></b>
+                 </span>
+                <!-- confirm password -->
+                <i class="msg-confirm"></i>
+                <input type="password"  id="signup-cpass" class="signup-cpass" placeholder="Confirm Password">
+                <span class="cpass-view">
+                    <label for="signup-cpass" class="fa fa-eye cpass-signup-show"></label> 
+                    <label for="signup-cpass" class="fa fa-eye-slash cpass-signup-hide"></label>
+                 </span>
+
+                <!-- sign up button -->
+                <button type="submit" class="signup-btn" >Sign Up</button>
+            <!-- </form> -->
+                <p>Already registered - <a href="#" onclick="toggleForm()">Sign In</a></p>
+        </form>
+            <div class="signup-cover">
+                <img src="./assets/img/city-profile.jpg">
+            </div>
+        </div>
+    </section>
+    <canvas></canvas>
+</body>
+<script src="./assets/js/core/jquery.min.js"></script>
+<script src="./form.js"></script>
+</html>
