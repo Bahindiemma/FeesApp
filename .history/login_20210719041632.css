@@ -317,7 +317,7 @@ section .sign-up .user-signup .cpass-view{
     /* show hide passcode eyes */
     section .sign-up .user-signup .npass-view{
         position: relative; 
-        transform: translate(290px , -47px);
+        transform: translate(330px , -47px);
         font-size: 17px;
      
     }
@@ -356,7 +356,7 @@ section .sign-up .user-signup .cpass-view{
         margin: 30px!important;
         top: 38.5% !important;
         max-width: 300px;
-       max-height: 780px;
+       max-height: 550px;
        z-index: 2;
         flex-direction: column;
     }
@@ -369,19 +369,6 @@ section .sign-up .user-signup .cpass-view{
      section .sign-in .signin-cover {
          max-width: fit-content;
         height: 190px;
-    }
-
-     /* show hide passcode eyes */
-     section .sign-up .user-signup .npass-view{
-        position: relative; 
-        transform: translate(250px , -47px);
-        font-size: 17px;
-     
-    }
-    section .sign-up .user-signup .cpass-view{
-        position:relative;
-         font-size: 17px;
-        transform: translate(250px ,-47px);
     }
 }
 /* for x-small phones */

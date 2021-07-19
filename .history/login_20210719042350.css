@@ -35,7 +35,7 @@ section.active{
     /* background: transparent; */
 }
  body.active{
-    background-image: url('./assets/img/city.jpg');
+    background-image: url('./assets/img/favicon.png');
 }
 .sign-in {
     width: 700px;

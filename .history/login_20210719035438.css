@@ -54,12 +54,10 @@ section.active{
 section.active .sign-in{
     top: 100%;
     opacity: 0;
-    visibility: hidden !important;
 }
 
 section.active .sign-up{
     top: -40%;
-    visibility: visible !important;
     opacity: 1;
 }
 section .container-form{
@@ -314,18 +312,6 @@ section .sign-up .user-signup .cpass-view{
          max-width: fit-content;
         height: 200px;
     }
-    /* show hide passcode eyes */
-    section .sign-up .user-signup .npass-view{
-        position: relative; 
-        transform: translate(290px , -47px);
-        font-size: 17px;
-     
-    }
-    section .sign-up .user-signup .cpass-view{
-        position:relative;
-         font-size: 17px;
-        transform: translate(290px ,-47px);
-    }
 }
 /* for small phones (4.0 inch) */
 @media(max-width:320px){
@@ -334,7 +320,7 @@ section .sign-up .user-signup .cpass-view{
         flex-direction: column-reverse;
         max-width: 300px;
         max-height: 550px;
-        top: -54% !important;
+        top: -50% !important;
     }
     section .sign-up .user-signup{
         overflow: auto;
@@ -347,7 +333,7 @@ section .sign-up .user-signup .cpass-view{
     section .container-form .signup-cover {
         padding: 0;
         margin: 0;
-        width: fit-content;
+        width: 300px;
         height: 150px;
         background-color: transparent;
     }
@@ -356,8 +342,7 @@ section .sign-up .user-signup .cpass-view{
         margin: 30px!important;
         top: 38.5% !important;
         max-width: 300px;
-       max-height: 780px;
-       z-index: 2;
+       max-height: 550px;
         flex-direction: column;
     }
     /* user input ui */
@@ -368,20 +353,7 @@ section .sign-up .user-signup .cpass-view{
      /* top sign image */
      section .sign-in .signin-cover {
          max-width: fit-content;
-        height: 190px;
-    }
-
-     /* show hide passcode eyes */
-     section .sign-up .user-signup .npass-view{
-        position: relative; 
-        transform: translate(250px , -47px);
-        font-size: 17px;
-     
-    }
-    section .sign-up .user-signup .cpass-view{
-        position:relative;
-         font-size: 17px;
-        transform: translate(250px ,-47px);
+        height: 200px;
     }
 }
 /* for x-small phones */

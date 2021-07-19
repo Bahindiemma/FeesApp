@@ -54,12 +54,10 @@ section.active{
 section.active .sign-in{
     top: 100%;
     opacity: 0;
-    visibility: hidden !important;
 }
 
 section.active .sign-up{
     top: -40%;
-    visibility: visible !important;
     opacity: 1;
 }
 section .container-form{
@@ -272,142 +270,8 @@ section .sign-up .user-signup .cpass-view{
         top: 290px;
     }
 }
-/* for medium phones */
-@media(max-width:620px){
-    /* ui for sign up */
-    section .sign-up{
-        flex-direction: column-reverse;
-        max-width: 340px;
-        max-height: 550px;
-        top: 30%;
-    }
-    section .sign-up .user-signup{
-        overflow: auto;
-        overflow-x: hidden;
-        max-width: 340px;
-        /* margin: 20px; */
-        height: 400px;
-    }
-
-    section .container-form .signup-cover {
-        padding: 0;
-        margin: 0;
-        width: 340px;
-        height: 300px;
-        background-color: transparent;
-    }
-    /* ui for sign in */
-    section .sign-in {
-        margin: 30px!important;
-        top: 32.5% !important;
-        max-width: 340px;
-       max-height: 550px;
-        flex-direction: column;
-    }
-    /* user input ui */
-    section .sign-in .user-signin{
-        max-width: 340px;
-         max-height: 400px;
-     }
-     /* top sign image */
-     section .sign-in .signin-cover {
-         max-width: fit-content;
-        height: 200px;
-    }
-    /* show hide passcode eyes */
-    section .sign-up .user-signup .npass-view{
-        position: relative; 
-        transform: translate(290px , -47px);
-        font-size: 17px;
-     
-    }
-    section .sign-up .user-signup .cpass-view{
-        position:relative;
-         font-size: 17px;
-        transform: translate(290px ,-47px);
-    }
-}
-/* for small phones (4.0 inch) */
-@media(max-width:320px){
-    /* ui for sign up */
-    section .sign-up{
-        flex-direction: column-reverse;
-        max-width: 300px;
-        max-height: 550px;
-        top: -54% !important;
-    }
-    section .sign-up .user-signup{
-        overflow: auto;
-        overflow-x: hidden;
-        max-width: 300px;
-        /* margin: 20px; */
-        height: 250px;
-    }
-
-    section .container-form .signup-cover {
-        padding: 0;
-        margin: 0;
-        width: fit-content;
-        height: 150px;
-        background-color: transparent;
-    }
-     /* ui for sign in */
-     section .sign-in {
-        margin: 30px!important;
-        top: 38.5% !important;
-        max-width: 300px;
-       max-height: 780px;
-       z-index: 2;
-        flex-direction: column;
-    }
-    /* user input ui */
-    section .sign-in .user-signin{
-        max-width: 300px;
-         max-height: 400px;
-     }
-     /* top sign image */
-     section .sign-in .signin-cover {
-         max-width: fit-content;
-        height: 190px;
-    }
-
-     /* show hide passcode eyes */
-     section .sign-up .user-signup .npass-view{
-        position: relative; 
-        transform: translate(250px , -47px);
-        font-size: 17px;
-     
-    }
-    section .sign-up .user-signup .cpass-view{
-        position:relative;
-         font-size: 17px;
-        transform: translate(250px ,-47px);
-    }
-}
-/* for x-small phones */
-@media(max-width:170px){
-    section .sign-up{
-        flex-direction: column-reverse;
-        max-width: 250px;
-        max-height: 750px;
-        top: -40% !important;
-    }
-    section .sign-up .user-signup{
-        overflow: auto;
-        overflow-x: hidden;
-        max-width: 250px;
-        /* margin: 20px; */
-        height: 750px;
-    }
-
-    section .container-form .signup-cover {
-        padding: 0;
-        margin: 0;
-        width: 250px;
-        height: 150px;
-        background-color: transparent;
-    }
-}
+/* for small phones */
+@media(max-width:440px)
 /* handle errors */
  .input-error{
      border: 1px solid red !important;

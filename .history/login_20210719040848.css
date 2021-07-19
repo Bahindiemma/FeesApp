@@ -41,7 +41,7 @@ section.active{
     width: 700px;
     height: 440px;
     opacity: 1;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s cubic-bezier(0.175, 5, 0.32, 1.275);
     top: 45%;
 }
 .sign-up{
@@ -49,7 +49,7 @@ section.active{
     height: 560px;
     top: 30%;
     opacity: 0;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s cubic-bezier(0.175, 5, 0.32, 1.275);
 }
 section.active .sign-in{
     top: 100%;
@@ -314,18 +314,6 @@ section .sign-up .user-signup .cpass-view{
          max-width: fit-content;
         height: 200px;
     }
-    /* show hide passcode eyes */
-    section .sign-up .user-signup .npass-view{
-        position: relative; 
-        transform: translate(290px , -47px);
-        font-size: 17px;
-     
-    }
-    section .sign-up .user-signup .cpass-view{
-        position:relative;
-         font-size: 17px;
-        transform: translate(290px ,-47px);
-    }
 }
 /* for small phones (4.0 inch) */
 @media(max-width:320px){
@@ -347,7 +335,7 @@ section .sign-up .user-signup .cpass-view{
     section .container-form .signup-cover {
         padding: 0;
         margin: 0;
-        width: fit-content;
+        width: 300px;
         height: 150px;
         background-color: transparent;
     }
@@ -356,7 +344,7 @@ section .sign-up .user-signup .cpass-view{
         margin: 30px!important;
         top: 38.5% !important;
         max-width: 300px;
-       max-height: 780px;
+       max-height: 550px;
        z-index: 2;
         flex-direction: column;
     }
@@ -369,19 +357,6 @@ section .sign-up .user-signup .cpass-view{
      section .sign-in .signin-cover {
          max-width: fit-content;
         height: 190px;
-    }
-
-     /* show hide passcode eyes */
-     section .sign-up .user-signup .npass-view{
-        position: relative; 
-        transform: translate(250px , -47px);
-        font-size: 17px;
-     
-    }
-    section .sign-up .user-signup .cpass-view{
-        position:relative;
-         font-size: 17px;
-        transform: translate(250px ,-47px);
     }
 }
 /* for x-small phones */

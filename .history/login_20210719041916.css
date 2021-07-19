@@ -35,7 +35,7 @@ section.active{
     /* background: transparent; */
 }
  body.active{
-    background-image: url('./assets/img/city.jpg');
+    background-image: url('./assets/img/sidebar-4.jpg');
 }
 .sign-in {
     width: 700px;
@@ -356,7 +356,7 @@ section .sign-up .user-signup .cpass-view{
         margin: 30px!important;
         top: 38.5% !important;
         max-width: 300px;
-       max-height: 780px;
+       max-height: 550px;
        z-index: 2;
         flex-direction: column;
     }
