@@ -33,7 +33,7 @@ var server = http.createServer((request, response) => {
             type = "text/plain";
             break;
     }
-    
+    Bi
     fs.readFile(url, (error, data) => {
         if (error) {
             if (error.code == "ENONET") {
@@ -42,7 +42,7 @@ var server = http.createServer((request, response) => {
                 console.log(error);
             }
         } else {
-          
+            console.log(data);
             response.writeHead(200, { "Content-type": type });
             response.end(data, "utf-8");
         }

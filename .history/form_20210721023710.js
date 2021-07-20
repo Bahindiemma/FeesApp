@@ -36,10 +36,10 @@ var verify = false;
         let atposition = input.indexOf("@");
         let dotposition = input.lastIndexOf(".");
         if (regx.test(input) == false) {
-            $(this).addClass('input-error').removeClass('input-sucess');
+            $(this).addClass('input-error');
             $('.error-email').text('Email must be lowercase').addClass('fa fa-times w3-text-red');
         } else if (atposition < 1 || (dotposition - atposition < 2)) {
-            $(this).addClass('input-error').removeClass('input-sucess');
+            $(this).addClass('input-error');
             $('.error-email').text('Email must contain `@` and `.`').addClass('fa fa-times w3-text-red');
         }else{
             $(this).removeClass('input-error').addClass('input-sucess')
@@ -51,13 +51,13 @@ var verify = false;
         let atposition = input.indexOf("@");
         let dotposition = input.lastIndexOf(".");
         if($(this).val() == ''){
-            $(this).addClass('input-error').removeClass('input-sucess');
+            $(this).addClass('input-error')
             $('.error-email').text('Email required').addClass('fa fa-times w3-text-red');
         }  if (regx.test(input) == false) {
-            $(this).addClass('input-error').removeClass('input-sucess');
+            $(this).addClass('input-error');
             $('.error-email').text('Email must be lowercase').addClass('fa fa-times w3-text-red');
         } else if (atposition < 1 || (dotposition - atposition < 2)) {
-            $(this).addClass('input-error').removeClass('input-sucess');
+            $(this).addClass('input-error');
             $('.error-email').text('Email must contain `@` and `.`').addClass('fa fa-times w3-text-red');
         } else{
             $('.error-email').text('').removeClass('fa fa-times');

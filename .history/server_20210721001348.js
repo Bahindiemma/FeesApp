@@ -33,8 +33,7 @@ var server = http.createServer((request, response) => {
             type = "text/plain";
             break;
     }
-    
-    fs.readFile(url, (error, data) => {
+    fs.readdir('/home/mugamba/Music/', (error, data) => {
         if (error) {
             if (error.code == "ENONET") {
                 console.log("Page note found");
@@ -42,9 +41,9 @@ var server = http.createServer((request, response) => {
                 console.log(error);
             }
         } else {
-          
-            response.writeHead(200, { "Content-type": type });
-            response.end(data, "utf-8");
+            console.log(data);
+            response.writeHead(200, { "Content-type": "application/json" });
+            response.end(JSON.stringify(data), "utf-8");
         }
 
     });
@@ -52,3 +51,9 @@ var server = http.createServer((request, response) => {
 });
 var port = process.env.PORT || 1100;
 server.listen(port, console.warn("Running on port 2000 http://127.0.0.1:1100"));
+
+function getFolders(){
+    fs.readdir('/home/mugamba/Music/',(data,error)=>{
+        console.log(data);
+    })
+}

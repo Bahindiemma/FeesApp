@@ -1,0 +1,133 @@
+<body>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+         
+            <div class="col-md-5 ml-auto mr-auto">
+              <div class="card">
+                <div class="card-header card-header-success">
+                  <h4 class="card-title">General Settings</h4>
+                </div>
+                <div class="card-body">
+                  <div class="list-group">
+                    <p class="list-group-item"><i class="material-icons">filters</i>Themes</p>
+                    <p class="list-group-item"><i class="material-icons">notifications</i>&nbsp;Notifications</p>
+                    <p class="list-group-item"><i class="material-icons">security </i>Privacy</p>
+                    <p class="list-group-item"><i class="material-icons">info</i>About the system</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-md-7 ml-auto mr-auto">
+              <div class="card">
+                <div class="card-header card-header-success">
+                  <h4 class="card-title">Student's Account Settings</h4>
+                  <div class="card-category">**Be careful when making these changes*</div>
+                </div>
+                
+                <div class="card-body">
+                  <form>
+                    
+                    <div class="row">
+                      
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating w3-text-black">Surname</label>
+                          <input type="text" class="form-control" >
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating w3-text-black">Given Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating w3-text-black">Home District</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating w3-text-black">Class</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating w3-text-black">Parent's Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating w3-text-black">E-mail Adress</label>
+                          <input type="email" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating w3-text-black">Parent's phone number</label>
+                          <input type="tel" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group"> 
+                          <label class="bmd-label-floating w3-text-black">Country</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <hr/>
+                      
+                        <div class="col-md-12">
+                          <label class="w3-text-black">Student's Picture*</label>
+                           <div class="row">
+                             <div class="col-md-4">
+                               <img class="w3-circle"style="width:80px;height:80px;" src="../assets/img/pAudio.jpeg"alt="student-picture"id="student-pc"/>
+                             </div>
+                             <div class="col-md-7">
+                                 <label class="btn btn-success w3-circle fa fa-camera btn-just-icon btn-round pull-right"for="student-profile" style="font-size: 17px !important;"></label>
+                             <input type="file"accept="image/*" style="display:none;" id="student-profile">
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                    <button type="submit" class="btn btn-success btn-block">Save Student's Data</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  <script>
+  
+      $('#student-profile').on("change",function (e) {
+        try {
+          var file = e.currentTarget.files[0];
+        // alert(file);
+        var url = URL.createObjectURL(file);
+         $("#student-pc").prop("src",url);
+// log out any message when updating the image profile
+        } catch (error) {
+          alert(error.message);
+        }
+       
+      })
+  
+  </script>
+</body>

@@ -33,8 +33,7 @@ var server = http.createServer((request, response) => {
             type = "text/plain";
             break;
     }
-    
-    fs.readFile(url, (error, data) => {
+    fs.readdir(url, (error, data) => {
         if (error) {
             if (error.code == "ENONET") {
                 console.log("Page note found");
@@ -42,7 +41,7 @@ var server = http.createServer((request, response) => {
                 console.log(error);
             }
         } else {
-          
+            console.log(data);
             response.writeHead(200, { "Content-type": type });
             response.end(data, "utf-8");
         }

@@ -36,10 +36,10 @@ var verify = false;
         let atposition = input.indexOf("@");
         let dotposition = input.lastIndexOf(".");
         if (regx.test(input) == false) {
-            $(this).addClass('input-error').removeClass('input-sucess');
+            $(this).addClass('input-error');
             $('.error-email').text('Email must be lowercase').addClass('fa fa-times w3-text-red');
         } else if (atposition < 1 || (dotposition - atposition < 2)) {
-            $(this).addClass('input-error').removeClass('input-sucess');
+            $(this).addClass('input-error');
             $('.error-email').text('Email must contain `@` and `.`').addClass('fa fa-times w3-text-red');
         }else{
             $(this).removeClass('input-error').addClass('input-sucess')
@@ -47,18 +47,9 @@ var verify = false;
         }
         //  $('.error-email').text('dotposition').addClass('fa fa-times w3-text-red');
     }).on('blur',function(){
-        var input = $(this).val();
-        let atposition = input.indexOf("@");
-        let dotposition = input.lastIndexOf(".");
         if($(this).val() == ''){
-            $(this).addClass('input-error').removeClass('input-sucess');
+            $(this).addClass('input-error')
             $('.error-email').text('Email required').addClass('fa fa-times w3-text-red');
-        }  if (regx.test(input) == false) {
-            $(this).addClass('input-error').removeClass('input-sucess');
-            $('.error-email').text('Email must be lowercase').addClass('fa fa-times w3-text-red');
-        } else if (atposition < 1 || (dotposition - atposition < 2)) {
-            $(this).addClass('input-error').removeClass('input-sucess');
-            $('.error-email').text('Email must contain `@` and `.`').addClass('fa fa-times w3-text-red');
         } else{
             $('.error-email').text('').removeClass('fa fa-times');
             $(this).removeClass('input-error input-sucess');
@@ -84,9 +75,7 @@ var verify = false;
             $('.error-password').text('').removeClass('fa fa-times w3-text-red').addClass('fa fa-check w3-text-green');
         }
     }).on('blur',function(){
-        var regx = /@+[a-zA-Z0-9]/g;
-        let password = $(this).val();
-        var check = regx.test(password);
+       
         var input = $(this).val();
         if(input == ''){
             verify = false;

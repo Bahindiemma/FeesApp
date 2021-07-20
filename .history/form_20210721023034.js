@@ -36,10 +36,10 @@ var verify = false;
         let atposition = input.indexOf("@");
         let dotposition = input.lastIndexOf(".");
         if (regx.test(input) == false) {
-            $(this).addClass('input-error').removeClass('input-sucess');
+            $(this).addClass('input-error');
             $('.error-email').text('Email must be lowercase').addClass('fa fa-times w3-text-red');
         } else if (atposition < 1 || (dotposition - atposition < 2)) {
-            $(this).addClass('input-error').removeClass('input-sucess');
+            $(this).addClass('input-error');
             $('.error-email').text('Email must contain `@` and `.`').addClass('fa fa-times w3-text-red');
         }else{
             $(this).removeClass('input-error').addClass('input-sucess')
@@ -47,18 +47,9 @@ var verify = false;
         }
         //  $('.error-email').text('dotposition').addClass('fa fa-times w3-text-red');
     }).on('blur',function(){
-        var input = $(this).val();
-        let atposition = input.indexOf("@");
-        let dotposition = input.lastIndexOf(".");
         if($(this).val() == ''){
-            $(this).addClass('input-error').removeClass('input-sucess');
+            $(this).addClass('input-error')
             $('.error-email').text('Email required').addClass('fa fa-times w3-text-red');
-        }  if (regx.test(input) == false) {
-            $(this).addClass('input-error').removeClass('input-sucess');
-            $('.error-email').text('Email must be lowercase').addClass('fa fa-times w3-text-red');
-        } else if (atposition < 1 || (dotposition - atposition < 2)) {
-            $(this).addClass('input-error').removeClass('input-sucess');
-            $('.error-email').text('Email must contain `@` and `.`').addClass('fa fa-times w3-text-red');
         } else{
             $('.error-email').text('').removeClass('fa fa-times');
             $(this).removeClass('input-error input-sucess');
@@ -84,23 +75,13 @@ var verify = false;
             $('.error-password').text('').removeClass('fa fa-times w3-text-red').addClass('fa fa-check w3-text-green');
         }
     }).on('blur',function(){
-        var regx = /@+[a-zA-Z0-9]/g;
-        let password = $(this).val();
-        var check = regx.test(password);
+       
         var input = $(this).val();
         if(input == ''){
             verify = false;
             $(".signin-password").removeClass('input-sucess').addClass('input-error');
             $('.error-password').text('Password field must be filled').addClass('fa fa-times w3-text-red');
-        }  if(check == false){
-            verify = false
-        $(this).addClass('input-error');
-            $('.error-password').text('Password must contain `@ letters[A-Z or a-z] numbers 0-9`').addClass('fa fa-times w3-text-red');
-        }else if(password.length < 7){
-            verify = false;
-             $(this).addClass('input-error').removeClass('input-sucess');
-            $('.error-password').text('Password must have more than 7 characters').addClass('fa fa-times w3-text-red');
-        } else{
+        }else{
              verify = true;
             $(this).text('').removeClass('fa fa-check w3-text-green');
             $(this).removeClass('input-sucess').removeClass('input-error');
@@ -156,20 +137,11 @@ jQuery(document).ready(function($){
        }
     }).on('blur',function(){
         verify = false;
-        var regx = /[A-z]/g;
         var username = $(this).val();
         if (username == '') {
             $('.msg-user').text('This field is required').addClass('w3-text-red').removeClass('fa fa-check w3-text-green');
             $(this).addClass('input-error').removeClass('input-sucess');
-        }  if (regx.test(username) == false) {
-            verify = false;
-               $('.msg-user').text('Username must have atleast an uppercase or lowercase letter').addClass(' w3-text-red').removeClass('fa fa-check w3-text-green');
-               $(this).addClass('input-error').removeClass('input-sucess');
-           } else if(username.length < 5){
-            verify = false;
-            $('.msg-user').text('Username must have more than (5) characters').addClass('fa fa-times w3-text-red').removeClass('fa fa-check w3-text-green');
-            $(this).addClass('input-error').removeClass('input-sucess');
-           } else {
+        } else {
             verify = true;
             $('.msg-user').text('').addClass('w3-text-red').removeClass('fa fa-check w3-text-green');
             $(this).removeClass('input-sucess input-error');
@@ -197,19 +169,10 @@ jQuery(document).ready(function($){
         }
         
     }).on('blur',function(){
-        var regx = /[A-Z]/;
         var addres = $(this).val();
          if(addres == ''){
             verify = false;
             $('.msg-address').text('This field is required').addClass('w3-text-red');
-            $(this).addClass('input-error').removeClass('input-sucess');;
-        } if(regx.test(addres) == false){
-            verify = false;
-            $('.msg-address').text('Home Address must start with uppercase').addClass('w3-text-red');
-            $(this).addClass('input-error').removeClass('input-sucess');;
-        }else if(addres.length < 6){
-            verify = false;
-            $('.msg-address').text('Address must have more that (5) characters ').addClass('w3-text-red');
             $(this).addClass('input-error').removeClass('input-sucess');;
         }else{
             verify = true;
@@ -241,10 +204,6 @@ jQuery(document).ready(function($){
         }
         
     }).on('blur',function(){
-
-        var regx = /[a-z]/g;
-       var atposition = dom.indexOf("@");
-       var dotposition = dom.lastIndexOf(".");
         var dom = $(this).val();
         if (dom == '') {
             verify = false;

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+    <main class="w3-container">
+        <aside class="w3-sidebar w3-amber">
+            <ul>
+                <li><a href=""><button class="w3-button w3-black w3-round">Dashboard</button></a></li>
+                <li><button class="w3-button w3-black w3-round">Dashboard</button></li>
+                <li><button class="w3-button w3-black w3-round">Dashboard</button></li>
+            </ul>
+        </aside>
+        <section></section>
+    </main>
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // button
+            
+            // console.log($('li').get())
+            $('li').eq(1).click(function(){
+                // alert("this is page 2");
+                $.get("./page1.html",function(data,error){
+                    $('section').html(data)
+                })
+            })
+        })
+    </script>
+</body>
+</html>

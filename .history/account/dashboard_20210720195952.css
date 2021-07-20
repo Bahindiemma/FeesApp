@@ -1,0 +1,19 @@
+@import url('/assets/css/w3.css');
+aside{
+    padding: 0px;
+    width: 100px;
+    left: 0;
+}
+aside ul{
+    margin: 20px;
+    padding: 0;
+}
+aside ul li{
+    list-style-type: none;
+    margin: 10px;
+}
+@media (max-width:991px) {
+    .sidebar{
+        display: hide !important;
+    }
+}

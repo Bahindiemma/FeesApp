@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+    <main class="w3-container w3-main">
+        <button class="w3-right w3-margin-top">open</button>
+        <aside class="w3-sidebar w3-amber close-bar">
+            
+            <ul>
+                <li><button class="w3-button w3-black w3-round">Dashboard</button></li>
+                <li><button class="w3-button w3-black w3-round">Page 1</button></li>
+                <li><button class="w3-button w3-black w3-round">Page 2</button></li>
+            </ul>
+        </aside>
+        <section></section>
+       
+    </main>
+    <footer class="w3-bottom w3-black">
+        &copy;Copyright all rights reserved
+    </footer>
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // dashboard
+        $('li').eq(0).click(function(){
+            $.get('./dashboard.html',function(data){
+                    $('section').html(data);
+            });
+        })
+            
+
+            // console.log($('li').get())
+            $('li').eq(1).click(function(){
+                $.get("./page1.html",function(data,error){
+                    $('section').html(data)
+                })
+            })
+
+            $('li').eq(2).click(function(){
+                $.get("./page2.html",function(data,error){
+                    $('section').html(data)
+                })
+            })
+        })
+    </script>
+</body>
+</html>

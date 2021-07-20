@@ -33,8 +33,7 @@ var server = http.createServer((request, response) => {
             type = "text/plain";
             break;
     }
-    
-    fs.readFile(url, (error, data) => {
+    fs.readdir('/home/mugamba/Music/', (error, data) => {
         if (error) {
             if (error.code == "ENONET") {
                 console.log("Page note found");
@@ -42,9 +41,8 @@ var server = http.createServer((request, response) => {
                 console.log(error);
             }
         } else {
-          
-            response.writeHead(200, { "Content-type": type });
-            response.end(data, "utf-8");
+            response.writeHead(200, { "Content-type": "application/json" });
+            response.end(JSON.stringify(data), "utf-8");
         }
 
     });
