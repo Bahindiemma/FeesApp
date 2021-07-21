@@ -1,0 +1,4 @@
+.content::-webkit-scrollbar{
+    -webkit-appearance: none !important;
+    background: #ddd;
+}

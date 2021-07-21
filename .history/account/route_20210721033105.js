@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // $('.ajax-container').hide();
+    $('.ajax-container').hide();
     $.get('./pages/board.html',function(data){
         $(".navbar-brand").text('Dashboard')
         $(document).ajaxStart(function(){

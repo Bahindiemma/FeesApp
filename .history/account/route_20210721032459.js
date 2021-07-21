@@ -1,15 +1,14 @@
 $(document).ready(function(){
-    // $('.ajax-container').hide();
+   
     $.get('./pages/board.html',function(data){
         $(".navbar-brand").text('Dashboard')
-        $(document).ajaxStart(function(){
-           $('.ajax-container').show();
+        $('.context').ajaxStart(function(){
+            alert('page loading')
         });
         $(document).ajaxComplete(function(){
-            $('.ajax-container').hide();
-            $('.content').html(data)
+            alert('page loaded')
         })
-       
+        $('.content').html(data)
 
      });
     $('.nav-item').eq(0).addClass('active')
@@ -18,14 +17,7 @@ $(document).ready(function(){
     $('title').text('Dashboard')
     $('.nav-item').eq(0).click(function(){
         $.get('./pages/board.html',function(data){
-            $(document).ajaxStart(function(){
-                $('.ajax-container').show();
-             });
-             $(document).ajaxComplete(function(){
-                 $('.ajax-container').hide();
-                 $('.content').html(data)
-             })
-            
+            $('.content').html(data)
         });
          // maniplate dom
          $('html').removeClass('nav-open')
@@ -46,13 +38,7 @@ $(document).ready(function(){
          $('title').text('Students-Profile')
 
         $.get('./pages/profile.html',function(data){
-            $(document).ajaxStart(function(){
-                $('.ajax-container').show();
-             });
-             $(document).ajaxComplete(function(){
-                 $('.ajax-container').hide();
-                 $('.content').html(data)
-             })
+            $('.content').html(data)
         });
             // maniplate dom
             $('html').removeClass('nav-open')
@@ -74,13 +60,7 @@ $(document).ready(function(){
         $('title').text('Staff');
 
         $.get('./pages/perfomance.html',function(data){
-            $(document).ajaxStart(function(){
-                $('.ajax-container').show();
-             });
-             $(document).ajaxComplete(function(){
-                 $('.ajax-container').hide();
-                 $('.content').html(data)
-             })
+            $('.content').html(data);
         });
             // maniplate dom
             $('html').removeClass('nav-open')
@@ -101,13 +81,7 @@ $(document).ready(function(){
         $(".navbar-brand").text('Reports')
         $('title').text('Reports')
         $.get('./pages/reports.html',function(data){
-            $(document).ajaxStart(function(){
-                $('.ajax-container').show();
-             });
-             $(document).ajaxComplete(function(){
-                 $('.ajax-container').hide();
-                 $('.content').html(data)
-             })
+            $('.content').html(data)
         });
             // maniplate dom
             $('html').removeClass('nav-open')
@@ -129,13 +103,7 @@ $(document).ready(function(){
         $('title').text('Registration')
 
         $.get('./pages/registration.html',function(data){
-            $(document).ajaxStart(function(){
-                $('.ajax-container').show();
-             });
-             $(document).ajaxComplete(function(){
-                 $('.ajax-container').hide();
-                 $('.content').html(data)
-             })
+            $('.content').html(data)
         });
             // maniplate dom
             $('html').removeClass('nav-open')
@@ -157,13 +125,7 @@ $(document).ready(function(){
         $('title').text('Location')
 
         $.get('./pages/location.html',function(data){
-            $(document).ajaxStart(function(){
-                $('.ajax-container').show();
-             });
-             $(document).ajaxComplete(function(){
-                 $('.ajax-container').hide();
-                 $('.content').html(data)
-             })
+            $('.content').html(data)
         });
             // maniplate dom
             $('html').removeClass('nav-open')
@@ -184,13 +146,7 @@ $(document).ready(function(){
         $(".navbar-brand").text('Notifications')
         $('title').text('Notifications')
         $.get('./pages/notifications.html',function(data){
-            $(document).ajaxStart(function(){
-                $('.ajax-container').show();
-             });
-             $(document).ajaxComplete(function(){
-                 $('.ajax-container').hide();
-                 $('.content').html(data)
-             })
+            $('.content').html(data)
         });
             // maniplate dom
             $('html').removeClass('nav-open')
@@ -212,13 +168,7 @@ $(document).ready(function(){
             $(".navbar-brand").text('Settings')
             $('title').text('Settings')
 
-            $(document).ajaxStart(function(){
-                $('.ajax-container').show();
-             });
-             $(document).ajaxComplete(function(){
-                 $('.ajax-container').hide();
-                 $('.content').html(data)
-             })
+            $('.content').html(data)
         });
             // maniplate dom
             $('html').removeClass('nav-open')

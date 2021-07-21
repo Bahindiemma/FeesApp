@@ -1,0 +1,10 @@
+body::-webkit-scrollbar{
+    -webkit-appearance: none !important;
+    background: #ddd;
+    width: 6px;
+}
+body::-webkit-scrollbar-thumb{
+    -webkit-appearance: none !important;
+    background: rgba(207, 17, 17, 0.867);
+    width: 6px;
+}
