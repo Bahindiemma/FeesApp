@@ -2,7 +2,7 @@ $(document).ready(function(){
     // $('.ajax-container').hide();
     $.get('./pages/board.html',function(data){
         $(".navbar-brand").text('Dashboard')
-        $(document).ajaxStart(function(){
+        $(".content").ajaxStart(function(){
            $('.ajax-container').show();
         });
         $(document).ajaxComplete(function(){
